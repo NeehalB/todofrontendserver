@@ -1,0 +1,6 @@
+first_name: state.firstname,
+        last_name: state.lastname,
+        username: state.username,
+        email: state.email,
+        password: state.password,       
+        profileImage : imageFile.current.files[0].name

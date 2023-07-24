@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddTask from "./components/addtask/AddTask";
+import LoginPage from "./components/login-and-sign-up/LoginPage";
+import SignUpPage from "./components/login-and-sign-up/SignUpPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ViewTask from "./components/viewtask/ViewTask";
+import PrivateRouter from "./components/auth/PrivateRouter";
+import PublicRouter from "./components/auth/PublicRouter";
+import CompletedTask from "./components/completedtask/CompletedTask";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PrivateRouter />}>
+          <Route path="/view_task" element={<ViewTask />} />
+          <Route path="/add_task" element={<AddTask />} />
+          <Route path="/complete_task" element={<CompletedTask />} />
+        </Route>
+        <Route path="/" element={<PublicRouter />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign_up_page" element={<SignUpPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
