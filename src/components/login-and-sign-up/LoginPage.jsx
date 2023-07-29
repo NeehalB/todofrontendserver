@@ -52,7 +52,7 @@ const LoginPage = () => {
   const getUserData = () => {
     axios
       .get(
-        `https://mernapptodobackend-2epa.onrender.com/get_user/?username=${state.username}&password=${state.password}`
+        `https://main--guileless-otter-a3993d.netlify.app/get_user/?username=${state.username}&password=${state.password}`
       )
       .then((res) => {
         localStorage.setItem("token", res.data.data._id);
