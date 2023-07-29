@@ -19,7 +19,7 @@ const AppBar = () => {
     <div className="login_inner_container appbar_inner_container">
       <div className="profile-image">
         <img
-          src={`https://mernapptodobackend-2epa.onrender.com/uploads/${profileImage}`}
+          src={`https://main--guileless-otter-a3993d.netlify.app/uploads/${profileImage}`}
           alt=""
           style={{
             width: "100%",
