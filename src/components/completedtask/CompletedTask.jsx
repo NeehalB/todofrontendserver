@@ -6,7 +6,7 @@ const CompletedTask = () => {
   const [taskname, setTaskname] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://main--guileless-otter-a3993d.netlify.app/get_tasks`, {
+      .get(`https://mernapptodobackend-2epa.onrender.com/get_tasks`, {
         params: { userid: _id, status: 0 },
       })
       .then((res) => {

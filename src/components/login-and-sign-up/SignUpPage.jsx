@@ -149,7 +149,7 @@ const SignUpPage = () => {
     console.log(formData);
     axios
       .post(
-        "https://main--guileless-otter-a3993d.netlify.app/add_new_user",
+        "https://mernapptodobackend-2epa.onrender.com/add_new_user",
         formData
       )
       .then((res) => {

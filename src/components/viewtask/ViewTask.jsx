@@ -11,7 +11,7 @@ const ViewTask = () => {
 
   useEffect(() => {
     axios
-      .get(`https://main--guileless-otter-a3993d.netlify.app/get_tasks`, {
+      .get(`https://mernapptodobackend-2epa.onrender.com/get_tasks`, {
         params: { userid: _id, status: 1, page: page, limit: 4 },
       })
       .then((res) => {
@@ -32,7 +32,7 @@ const ViewTask = () => {
 
     axios
       .put(
-        `https://main--guileless-otter-a3993d.netlify.app/edit_task?task_id=${_id}`,
+        `https://mernapptodobackend-2epa.onrender.com/edit_task?task_id=${_id}`,
         {
           status: status,
         }

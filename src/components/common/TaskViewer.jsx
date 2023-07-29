@@ -12,7 +12,7 @@ const TaskViewer = ({ data }) => {
     console.log("Hello");
     axios
       .put(
-        `https://main--guileless-otter-a3993d.netlify.app/edit_task?task_id=${_id}`,
+        `https://mernapptodobackend-2epa.onrender.com/edit_task?task_id=${_id}`,
         {
           taskname: inputTask.current.value,
         }

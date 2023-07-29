@@ -12,7 +12,7 @@ const AddTask = () => {
 
   const addTaskData = () => {
     axios
-      .post(`https://main--guileless-otter-a3993d.netlify.app/add_task`, {
+      .post(`https://mernapptodobackend-2epa.onrender.com/add_task`, {
         task_name: taskname,
         creator_name: creatorname,
         user_id: _id,
